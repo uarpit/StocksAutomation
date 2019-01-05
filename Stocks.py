@@ -21,4 +21,15 @@ class Stock:
         self.sls_grwth_curr_yr = 0.0
         self.sls_grwth_next_yr = 0.0
 
+    def avg_eps_chng_curr_yr(self):
+        chng = (self.avg_eps_curr_yr - self.avg_eps_prev_yr) * 100 / self.avg_eps_prev_yr
+        chng_rnd = round(chng, 2)
+        return str(chng_rnd) + '%'
+
+    def avg_eps_chng_next_yr(self):
+        chng = (self.avg_eps_next_yr - self.avg_eps_curr_yr) * 100 / self.avg_eps_next_yr
+        chng_rnd = round(chng, 2)
+        return str(chng_rnd) + '%'
+
+
 
